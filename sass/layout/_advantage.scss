@@ -1,0 +1,33 @@
+.section-advantage {
+    &__title--hidden {
+        @extend %visually-hidden;
+    }
+
+    &__list {
+        @include flex-box ($gap: 30px, $align-items: null, $justify-content: null);
+    }
+
+    &__container {
+        @include flex-box ($gap: null);
+
+        width: 270px;
+        height: 120px;
+        background-color: var(--light-bcg-color);
+        border-radius: 4px;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+
+        @include fonts ($fw: null, $ls: 0.03em);
+    }
+
+    &__text {
+        min-width: 270px;
+
+        color: var(--light-txt-color);
+
+        @include fonts ($fw: null, $lh: 24px, $ls: 0.03em);
+    }
+}

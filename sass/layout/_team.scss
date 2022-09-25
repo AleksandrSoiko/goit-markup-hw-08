@@ -1,0 +1,43 @@
+.team-section {
+    background-color: var(--light-bcg-color);
+
+    &__list {
+        @include flex-box ($gap: 30px, $align-items: null, $justify-content: null);
+    }
+
+    &__item {
+        text-align: center;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+        background-color: var(--white-color);
+    }
+
+    &__img {
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+        text-align: center;
+
+        @include fonts ($fw: null, $fs: 36px, $lh: 42px, $ls: 0.03em);
+    }
+
+    &__name {
+        margin-bottom: 10px;
+
+        @include fonts ($fw: 500, $fs: 16px, $lh: 19px, $ls: 0.03em);
+    }
+
+    &__position {
+        margin-bottom: 16px;
+
+        color: var(--light-txt-color);
+
+        @include fonts ($fw: null, $fs: 16px, $lh: 19px, $ls: 0.03em);
+    }
+}
+
+@import '../components/social'

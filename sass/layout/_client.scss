@@ -1,0 +1,37 @@
+.client-section {
+    &__title {
+        margin-bottom: 50px;
+
+        @include fonts ($fw: null, $fs: 36px, $lh: 42px, $ls: 0.03em);
+
+        text-align: center;
+    }
+
+    &__list {
+        @include flex-box ($gap: 30px, $align-items: null, $justify-content: null);
+    }
+
+    &__link {
+        @include flex-box ($display: inline-flex, $gap: null);
+        width: 170px;
+        height: 92px;
+        border: 1px solid var(--social-color);
+        border-radius: 4px;
+        color: var(--social-color);
+
+        @include animation-double ();
+    }
+
+    &__icon {
+        fill: currentColor;
+    }
+}
+
+.client-section__link {
+
+    &:hover,
+    &:focus {
+        border-color: var(--blue-txt-color);
+        fill: var(--blue-txt-color);
+    }
+}

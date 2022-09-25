@@ -1,0 +1,41 @@
+.list-portfolio {
+    @include flex-box ($gap: 30px, $align-items: null, $justify-content: null);
+    flex-wrap: wrap;
+
+    &__container {
+        padding: 20px 24px;
+        border-left: var(--border-setup);
+        border-right: var(--border-setup);
+        border-bottom: var(--border-setup);
+    }
+
+    &__title {
+        margin-bottom: 4px;
+
+        color: var(--main-txt-color);
+
+        @include fonts ($fw: 700, $fs: 18px, $lh: 36px, $ls: 0.06em);
+    }
+
+    &__text {
+        color: var(--light-txt-color);
+
+        @include fonts ($fs: 16px, $lh: 30px, $ls: 0.03em);
+    }
+
+    &__link {
+        display: block;
+
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+.list-portfolio__link {
+
+    &:hover,
+    &:focus {
+        color: var(--blue-txt-color);
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+}
