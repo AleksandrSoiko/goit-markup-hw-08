@@ -1,6 +1,10 @@
 .social-list {
     @include flex-box ($gap: 10px, $align-items: null);
-    margin-bottom: 30px;
+    margin-bottom: 24px;
+
+    @media screen and (min-width:1200px) {
+        margin-bottom: 30px;
+    }
 
     &__item {
         width: 44px;
@@ -22,6 +26,12 @@
     }
 
     &--light {
+        @media screen and (max-width:767px) {
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
         @include flex-box ($gap: 10px, $align-items: null, $justify-content: start);
     }
 

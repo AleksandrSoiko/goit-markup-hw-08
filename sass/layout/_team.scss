@@ -2,7 +2,14 @@
     background-color: var(--light-bcg-color);
 
     &__list {
-        @include flex-box ($gap: 30px, $align-items: null, $justify-content: null);
+
+        @media (min-width:768px) and (max-width:1199px) {
+            flex-wrap: wrap;
+        }
+
+        @media screen and (min-width:768px) {
+            @include flex-box ($gap: 30px, $align-items: null, $justify-content: null);
+        }
     }
 
     &__item {
@@ -12,10 +19,30 @@
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
         background-color: var(--white-color);
+
+        &:not(:last-child) {
+            @media screen and (max-width:767px) {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            max-width: 450px;
+            display: inline-block;
+        }
+
+        @media screen and (min-width:768px) {
+            width: 354px;
+        }
+
+        @media screen and (min-width:1200px) {
+            width: 270px;
+        }
     }
 
     &__img {
         margin-bottom: 30px;
+        width: 100%;
     }
 
     &__title {

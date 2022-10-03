@@ -1,53 +1,61 @@
 .section-hero {
-  background-color: var(--dark-bcg-color);
-  background-image: linear-gradient(to top,
-      rgba(47, 48, 58, 0.4) 0%,
-      rgba(47, 48, 58, 0.4) 100%),
-    url(../images/hero.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+    background-color: var(--dark-bcg-color);
 
-  padding-top: 200px;
-  padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    text-align: center;
+
+    @media screen and (min-width:1200px) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
 }
 
 .container__main-title {
-  width: 696px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    @media screen and (max-width:1199px) {
+        max-width: 360px;
+    }
+
+    @media screen and (min-width:1200px) {
+        width: 696px;
+    }
 }
 
 .main-title {
-  text-align: center;
+    text-align: center;
 
-  color: var(--white-color);
-  text-transform: uppercase;
+    color: var(--white-color);
+    text-transform: uppercase;
 
-  @include fonts ($fw: 900, $fs: 44px, $lh: 60px, $ls: 0.06em);
+    @include fonts ($fw: 900, $fs: 26px, $lh: 42px, $ls: 0.06em);
+
+    @media screen and (min-width:1200px) {
+        @include fonts ($fw: 900, $fs: 44px, $lh: 60px, $ls: 0.06em);
+    }
 }
 
 .section-hero__btn {
-  display: block;
-  padding: 10px 32px;
-  margin-right: auto;
-  margin-left: auto;
-  border-radius: 4px;
+    display: block;
+    padding: 10px 24px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 4px;
 
-  background-color: var(--blue-btn-color);
-  color: var(--white-color);
+    background-color: var(--blue-btn-color);
+    color: var(--white-color);
 
-  @include fonts ($fw: 700, $fs: 16px, $lh: 30px, $ls: 0.06em);
+    @include fonts ($fw: 700, $fs: 16px, $lh: 30px, $ls: 0.06em);
 
-  @include animation-double ();
+    @include animation-double ();
 
-  &:active,
-  &:focus,
-  &:hover {
-    background-color: rgb(1, 122, 220);
-    color: #212121;
-  }
+    &:active,
+    &:focus,
+    &:hover {
+        background-color: rgb(1, 122, 220);
+        color: #212121;
+    }
 }

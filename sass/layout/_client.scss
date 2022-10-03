@@ -9,11 +9,36 @@
 
     &__list {
         @include flex-box ($gap: 30px, $align-items: null, $justify-content: null);
+
+        @media screen and (max-width:1199px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__item {
+        @media screen and (max-width:767px) {
+            max-width: calc( ( 100% - 30px ) / 2 );
+        }
     }
 
     &__link {
         @include flex-box ($display: inline-flex, $gap: null);
-        width: 170px;
+
+        @media screen and (max-width:767px) {
+            max-width: 100%;
+        }
+
+        
+
+        @media screen and (max-width:1199px) {
+            width: 226px;
+        }
+
+        @media screen and (min-width:1199px) {
+            width: 170px;
+        }
+
         height: 92px;
         border: 1px solid var(--social-color);
         border-radius: 4px;
@@ -32,6 +57,6 @@
     &:hover,
     &:focus {
         border-color: var(--blue-txt-color);
-        fill: var(--blue-txt-color);
+        color: var(--blue-txt-color);
     }
 }

@@ -7,8 +7,15 @@
     }
 
     &__text {
-        @include fonts ($lh: 24px, $ls: 0.03em);
         color: var(--light-txt-color);
+
+        @media screen and (max-width:1199px) {
+            @include fonts ($fs: 12px, $lh: 14px, $ls: 0.03em)
+        }
+
+        @media screen and (min-width:1200px) {
+            @include fonts ($lh: 24px, $ls: 0.03em);
+        }
     }
 }
 

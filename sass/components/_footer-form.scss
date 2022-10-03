@@ -1,5 +1,7 @@
 .footer-form {
-    margin-left: auto;
+    @media screen and (max-width:1199px) {
+        text-align: center;
+    }
 
     &__title {
         display: block;
@@ -10,14 +12,37 @@
         color: var(--white-color);
 
         margin-bottom: 20px;
+
+    
     }
 
     &__field {
-        display: inline-block;
+
+        display: block;
+
+        @media screen and (max-width:1199px) {
+            margin-bottom: 20px;
+        }
+
+        @media screen and (min-width:1200px) {
+            display: inline-block;
+        }
     }
 
     &__input {
-        width: 358px;
+
+        @media screen and (max-width:767px) {
+            width: 100%;
+        }
+
+        @media screen and (min-width:768px) {
+            width: 450px;
+        }
+
+        @media screen and (min-width:1200px) {
+            width: 358px;
+        }
+
         height: 50px;
         padding: 15px 16px;
 
