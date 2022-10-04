@@ -356,7 +356,16 @@ a {
             order: 1;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 384px) {
+  .contact__link {
+    color: var(--blue-txt-color);
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.54;
+    letter-spacing: 0.02em;
+  }
+}
+@media screen and (min-width: 385px) and (max-width: 767px) {
   .contact__link {
     color: var(--blue-txt-color);
     font-weight: 500;
