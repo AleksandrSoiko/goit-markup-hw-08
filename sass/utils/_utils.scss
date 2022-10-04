@@ -59,3 +59,4 @@ a {
 @mixin animation-double ($attribute-first: color, $attribute-second: background-color) {
   transition: $attribute-first 250ms cubic-bezier(0.4, 0, 0.2, 1), $attribute-second 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
