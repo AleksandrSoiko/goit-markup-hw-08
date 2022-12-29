@@ -11,7 +11,6 @@
             @include flex-box ($gap: 30px, $align-items: null, $justify-content: null);
         }
     }
-
     &__item {
         text-align: center;
         border-bottom-right-radius: 4px;

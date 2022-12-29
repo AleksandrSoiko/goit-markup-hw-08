@@ -7,6 +7,7 @@
 @media screen and (min-width:1200px) {
     .section-work {
         padding-top: 0;
+        
         &__list {
             @include flex-box ($gap: 30px, $align-items: null, $justify-content: null);
         }
